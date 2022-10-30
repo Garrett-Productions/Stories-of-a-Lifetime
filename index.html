@@ -1,0 +1,243 @@
+<!--This is the first draft of changes implemented.-->
+HOMEPAGE 
+
+<!--Below we have built media queries to add on, so to help the transition of content when resizing or when viewed from different viewports all through the homepage-->
+
+@media screen and (max-width: 1330px){
+    .imgWrapBtn button .btnWrapper p {
+            font-size:1.1rem;
+            margin-bottom: 50px;
+        }
+}
+
+@media screen and (max-width: 1130px){
+    .imgWrapBtn button .btnWrapper p {
+            font-size:1.0rem;
+            margin-top: 75px;
+        }
+}
+
+@media screen and (max-width: 960px){
+    .imgWrapBtn button .btnWrapper p  {
+            margin-top: 135px;
+            font-size:1.3rem;
+        }
+}
+
+<!--Reference: style css 1665-->
+@media screen and (max-width: 768px){
+.imgWrapBtn button .btnWrapper p {
+    font-size: 1.2rem;
+    margin-top:180px;
+    transform: rotate(270deg) translate(-60px, 0px);
+	}
+}
+
+@media screen and (max-width: 650px){
+    .imgWrapBtn button .btnWrapper p  {
+        font-size: .9rem;
+        margin-top: 97px;
+	}
+}
+
+<!--
+.share_story .container-fluid section
+- Within the child row class, edit both of those child classes immediately under to display "col-12" & "col-lg-6"
+-->
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+“How It Works” <!-- Section of The Homepage-->
+
+Remove
+<!--//style.css:2085 **** “this is giving alignment issues with our font resizing during our media query”-->
+@media screen and (max-width: 480px){
+    .how_works .stepWrapper{
+        flex-direction: column;
+	}
+}
+
+.chapterOption <!--(correcting this below will better align the photo in the “Sample Chapter Options”-->
+
+<!--// the child div called “row align-items-end” needs changed to “row align-items-center” -->
+
+——————————————————————————————————
+
+“What people are saying” <!--section of our homepage -->
+
+<!--// .h3 class of “text-left” should be changed to “text-center” for better alignment-->
+
+——————————————————————————————————
+
+“FAQ” <!--Section of our Homepage-->
+
+Remove
+<!--(We need to remove the height and width from this query, it's creating inconsistent button emblem heights when resizing)-->
+
+@media screen and (max-width: 480px){
+//style.css:1899
+    .accordion-custom .card-header a.card-link span {
+        width: 35px;
+        height: 35px;
+	}
+}
+
+Add
+card-body //css 601
+
+@media screen and (max-width: 768px){
+    .accordion-custom .card-body {
+        margin-left: 0px;
+        padding-left: 10px;
+	}
+}
+
+
+.accordion-custom .card-body ul {
+	padding-left: 15px;
+	}
+
+
+
+<!--
+                *Suggestion*
+On the card-body class in our FAQ section we need to remove the .text-justify class so our HTML flows better when resizing 
+-->
+
+——————————————————————————————————————
+
+“Get Started” <!--section of our homepage under FAQ’s-->
+
+<!--Add media queries for better flow of content, no overlapping of content and no duplication of background image when on different viewports -->
+
+//style 609
+    .getStartedHomepage {
+        background-image: url(../../images/home/homeBoard.jpg);
+        height: 550px;
+        background-position: 0 28%;
+        background-attachment: fixed;
+        background-size: cover;
+}
+
+
+style.css:1937
+@media screen and (max-width: 480px){
+    .boardWrapper {    
+        left: 4%;
+	}
+}
+
+style.css:1943
+@media screen and (max-width: 480px){
+    .getStartedHomepage {
+        height: 400px;
+        position: relative;
+    }
+}
+
+REMOVE THIS BELOW
+
+@media screen and (max-width: 768px){
+style.css:1717
+    .getStartedHomepage {
+        background-size:cover;
+    }
+}
+————————————————————————————————————
+
+“Footer, Stay In touch” <!--section of our homepage -->
+
+Add
+
+.custom-footer
+//style.css:2186
+@media screen and (max-width: 480px){
+    .footer.footer {
+        margin-top: 18rem;
+        padding-bottom:30px;
+    }
+}
+
+———————————————————————————
+
+About Us Page <!-- Section of the homepage-->
+
+.onceAbout {
+    margin-top: 4rem
+}
+
+.ourMission {
+	margin-top: 4rem
+}
+
+//style.css:71
+    .hero-Wrapper h1 {
+        text-shadow: 2px 2px 4px #000000;
+}
+
+.mid_section-family .col-md-4 {
+	margin-bottom:15px;
+}
+
+REMOVE
+
+//style.css:2199
+@media (max-width: 800px) and (min-width: 767px)
+    .customBackground {
+        padding: 0 10px;
+}
+
+//style.css:2244
+@media screen and (max-width: 767px)
+    .customBackground {
+        padding: 0 5px;
+}
+<!--
+* Remove custom-mt class from our onceAbout class.. (there is too much margin)
+* Remove custom-mt class from our ourMission class.. (there is too much margin)
+-->
+—————————————————————————————————————————————————————————————————————————————————
+PRICING TAB/ PURCHASE PAGE <!-- New Page-->
+
+//Style.css:935
+    .purchase-page .hero-Wrapper {	    
+        background-image: url(../../images/common/heart-stone.jpg);		    
+        height: 540px;	    
+        background-size: cover;	    
+        background-position: -110px 0px;
+}
+
+.purchase-page .storyteller-details{
+	margin-top:30px;
+}
+—————————————————————————————————————————————————————————————————————————————————
+
+
+<!-- General Comments Below -->
+
+Global 
+<!-- Messing with the min-width 767PX and max-width of 768PX -->
+//image.scss:12
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+}
+<!--
+Discuss changing .custom-mt to have smaller margins on mobile viewports, change 480px to 767px?
+Synchronize .getStartedHomepage and .getStarted styles to avoid redundancies 
+-->
+
+<!--General CSS Comments about the Homepage -->
+//Style 847  .share-story & .p change to 1.7 line height? Also check the fonts to better match them together
+//style css 258-- change transform rotate to 270 degrees instead of 269
+//Style css 1327 -- change transform to 270 degrees
+//Style 269, get rid of the font size
+
+
+<!--Refactoring HTML Approach ideas/Notes for ourselves -->
+//Needs an HTML refractor to avoid using position:absolute
+//We may also need a font size change on tablet and mobile views
+//Question Section may need to be taller to make scrolling usable with a finger
+//the footer section of our homepage has a lot of font styles, potential to edit them for better match?
+//We need to make the “hero-Wrapper” class better, it's apart of the pricing tab and the about us page
+//The small header that with our nabber that displays globally has a resizing issue on the right side when resizing. Needs refactored to fit properly.
