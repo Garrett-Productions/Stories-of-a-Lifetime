@@ -1,0 +1,149 @@
+<!--This is the second round of changes that need to be implemented-->
+
+<!--ADD -->
+HOMEPAGE 
+
+//Style.css 2154
+@media screen and (max-width: 480px){
+    .Homepage .hero-Wrapper .title_text h2.text-white {
+        color: #000 !important;
+        font-size: 2.3rem;
+        padding-bottom: 3px;
+        text-shadow: none;
+	}
+}
+
+
+//Style.css: 1584
+@media screen and (max-width: 768px){
+    .Homepage .hero-Wrapper .title_text h2.text-white.subtagline {
+        font-size: 1.7rem !important;
+        text-shadow: none;
+    }
+}
+
+//Style.css: 2159
+@media screen and (max-width: 480px){
+    .Homepage .hero-Wrapper .title_text p.text-white {
+        color: #000 !important;
+        font-size: 16px;
+    }
+}
+
+//Style.css: 1593
+@media screen and (max-width: 768px){
+    .Homepage .hero-Wrapper .title_text h2.text-white {
+        font-size: 2.5rem !important;
+    }
+}
+
+<!--“Buttons on homepage Font Edits” -->
+
+//Style.css: 2132
+@media screen and (max-width: 480px){
+    .btn.btnBlack {
+        width: 100%;
+        font-size: 1.2rem;
+	}
+}
+
+//Style.css: 2163 
+<!--(editing this class impacts 2 buttons also including the “Get Started” button down below on the same page)-->
+@media screen and (max-width: 480px){
+    .btn.btntheme {
+        font-size: 1.2rem; 
+    }
+}
+
+
+//style.css: 1877
+@media screen and (max-width: 480px){
+    .how_works button.btn.btnBlack.text-white {
+        font-size: 1.3rem;
+    }
+}
+
+//style.css: 2121
+@media screen and (max-width: 480px){
+    .how_works .stepWrapper .textDetails h4 {
+        font-size: 1.8rem;
+    }
+}
+
+//style.css: 2023
+@media screen and (max-width: 480px){.  <!-- This affects the 3 <H5> elements below the “how it works” section -->
+    .questions .QuesWrapper h5 {
+        font-size: 1.5rem;
+    }
+}
+
+——————————————————————————
+<!--*Add to style.css* (How it works section) -->
+@media screen and (max-width: 480px){
+    h3.headingDefault {
+        font-size: 2.3rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .getStartedHomepage .boardWrapper p{
+        font-size: 1.2rem;
+    }
+}
+
+——————————————————————————
+
+<!--ABOUT US PAGE (Our Story)-->
+
+REMOVE
+
+//style.css:2354
+@media screen and (max-width: 480px){
+    .hero-Wrapper h1 {
+        font-size: 2.0rem;    <!-- without this the text defaults to 3REM which matches the “pricing page’s <h1>”--> 
+    }
+}
+
+SPECIAL NOTE 
+div class="col-md-6 text-justify”.  <!--only remove the 'text-justify' from this div class, 'text-justify' displays odd line spacing --> 
+
+
+ADD
+
+//style.css 131
+    .mid_section-family .our-story h4 {
+        font-size: 1.5rem;
+}
+
+//Style.css: 24
+    .our-story p {
+        font-size: 1.4rem;
+}
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————                                                                        
+
+<!--Pricing PAGE -->
+
+ADD
+
+h3.headingDefault {     <!-- This will enhance the size of the “Step One,” Step Two,” and “Step Three” H3’s. -->
+    font-size: 2.7rem;
+}
+
+
+.custom_heading_chapter {
+    font-size: 25px;
+}
+
+
+.select-chapters .mb-5 my-5 { <!-- This creates a bit more spacing especially on mobile on your “Step two” option paragraph -->
+    margin-bottom: 3.5rem!important;
+}
+
+
+purchase-page .hero-Wrapper .title_text h2 {
+    font-family: 'Lora';
+    font-weight: 700;
+    font-size: 2.95rem;
+    margin-bottom: 70px;
+    text-shadow: 2px 2px 4px #000000;
+}
